@@ -1,50 +1,74 @@
 {
-  "name": "carrier-pigeon",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@craco/craco": "^6.1.1",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.21",
-    "@types/node": "^12.20.6",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.2.3",
-    "web-vitals": "^1.1.1"
-  },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.4",
-    "autoprefixer": "^9.8.6",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
-  }
+   "name": "carrier-pigeon",
+   "version": "0.1.0",
+   "private": true,
+   "dependencies": {
+      "@craco/craco": "^6.1.1",
+      "@testing-library/jest-dom": "^5.11.9",
+      "@testing-library/react": "^11.2.5",
+      "@testing-library/user-event": "^12.8.3",
+      "@types/jest": "^26.0.21",
+      "@types/node": "^12.20.6",
+      "@types/react": "^17.0.3",
+      "@types/react-dom": "^17.0.2",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "react-scripts": "4.0.3",
+      "typescript": "^4.2.3",
+      "web-vitals": "^1.1.1"
+   },
+   "scripts": {
+      "start": "craco start",
+      "build": "craco build",
+      "test": "craco test",
+      "eject": "react-scripts eject",
+      "format": "prettier --write './**/*.{js,jsx,ts,tsx,md,json}' --config ./.prettierrc",
+      "lint": "eslint --fix . --ext js,jsx,ts,tsx,md --ignore-path ./.gitignore"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "lint-staged"
+      }
+   },
+   "lint-staged": {
+      "src/**/*.{js,jsx,ts,tsx,json}": [
+         "npm run format"
+      ]
+   },
+   "eslintConfig": {
+      "extends": [
+         "react-app",
+         "react-app/jest"
+      ]
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   },
+   "devDependencies": {
+      "@tailwindcss/postcss7-compat": "^2.0.4",
+      "autoprefixer": "^9.8.6",
+      "postcss": "^7.0.35",
+      "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
+      "@typescript-eslint/eslint-plugin": "^4.4.0",
+      "eslint-config-airbnb-base": "^14.0.0",
+      "eslint-config-prettier": "^6.12.0",
+      "eslint-plugin-import": "^2.18.2",
+      "eslint-plugin-jsx-a11y": "^6.3.1",
+      "eslint-plugin-prettier": "^3.1.4",
+      "eslint-plugin-react": "^7.21.3",
+      "eslint-plugin-react-hooks": "^4.1.2",
+      "eslint-plugin-simple-import-sort": "^5.0.3",
+      "husky": "^4.3.0",
+      "lint-staged": "^10.4.0",
+      "prettier": "^2.1.2"
+   }
 }
