@@ -11,19 +11,21 @@ function App() {
    return (
       <div className="md:container md:mx-auto">
          <div className="flex space-x-4 ">
-            <div className="flex-none w-1/6">
+            <div className="w-1/5">
                <div className="flex items-center mt-5 border-b-2">
                   <img className="w-24 h-24 mr-5" src={logo} alt="logo" />
                   <p className="text-gray-600">pigeon homing</p>
                </div>
                <div className="flex justify-between pt-5 pb-5 mt-5">
-                  <img className="w-16 h-16 rounded-full" src={userImage} alt="" />
-                  <div className="flex flex-col">
-                     <p>George Tarielashvili</p>
-                     <p className="text-xs text-gray-500">Senior UI/UX Designer</p>
-                     <p className="text-xs text-green-600">Online</p>
+                  <div className="flex">
+                     <img className="mr-4 rounded-full w-14 h-14" src={userImage} alt="" />
+                     <div>
+                        <p>George Tarielashvili</p>
+                        <p className="text-xs text-gray-500">Senior UI/UX Designer</p>
+                        <p className="text-xs text-green-600">Online</p>
+                     </div>
                   </div>
-                  <img className="w-4 h-4" src={settingsIcon} alt="" />
+                  <img className="items-start w-4 h-4 mt-1" src={settingsIcon} alt="" />
                </div>
                <div className="mt-5">
                   <p>Active Chats</p>
@@ -57,8 +59,8 @@ function App() {
                   </div>
                </div>
             </div>
-            <div className="flex-1">message convo component</div>
-            <div className="flex-none w-1/6">chat details component</div>
+            <div className="">message convo component</div>
+            <div className="">chat details component</div>
          </div>
       </div>
    );
