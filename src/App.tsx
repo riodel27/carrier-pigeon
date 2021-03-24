@@ -7,6 +7,8 @@ import userSix from './assets/resources/user-six.jpeg';
 import userFive from './assets/resources/user-five.jpeg';
 import settingsIcon from './assets/settings.png';
 
+/** main app */
+
 function App() {
    return (
       <div className="md:container md:mx-auto">
